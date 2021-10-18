@@ -7,6 +7,14 @@ from typing import Tuple, List
 
 
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
+    """
+        Description:
+                Use mypy to validate the following piece of code
+                and apply any necessary changes.
+        Arguments:
+                lst: Tuple, factor: int = 2
+    """
+
     zoomed_in: List = [
         item for item in lst
         for i in range(factor)
