@@ -32,11 +32,11 @@ class Server:
         assert isinstance(page_size, int) and page_size > 0
 
         dataset: List[List] = self.dataset()
-        start, end = self.index_range(page, page_size)
+        start, end = index_range(page, page_size)
 
         return dataset[start, end]
 
-    def index_range(self, page: int, page_size: int) -> Tuple[int, int]:
-        """ Range of the page
-        """
-        return ((page - 1) * page_size, page * page_size)
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
+    """ Range of the page
+    """
+    return ((page - 1) * page_size, page * page_size)
