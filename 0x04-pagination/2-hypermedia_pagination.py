@@ -48,7 +48,7 @@ class Server:
         dataset: List[List] = self.dataset()
         start, end = self.index_range(page, page_size)
 
-        return dataset[start, end]
+        return dataset[start: end]
 
     def index_range(self, page: int, page_size: int) -> Tuple[int, int]:
         """ Range of the page
