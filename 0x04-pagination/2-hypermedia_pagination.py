@@ -46,7 +46,7 @@ class Server:
         assert isinstance(page_size, int) and page_size > 0
 
         dataset: List[List] = self.dataset()
-        start: int, end: int = self.index_range(page, page_size)
+        start, end = self.index_range(page, page_size)
 
         return dataset[start, end]
 
